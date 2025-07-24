@@ -1,3 +1,5 @@
 env
 .env
+.portalenv
 document_portal.egg-info
+portalenv
