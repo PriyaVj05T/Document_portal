@@ -3,3 +3,8 @@ env
 .portalenv
 document_portal.egg-info
 portalenv
+venv/
+__pycache__/
+logs/
+*.pyc
+test.py

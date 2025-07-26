@@ -72,5 +72,9 @@ https://console.groq.com/docs/overview
 https://aistudio.google.com/apikey
 
 https://ai.google.dev/gemini-api/docs/models
+
 ```
-   
+### inbuilt logging modules of python 
+structlog
+logguru
+logging   
