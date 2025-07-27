@@ -78,3 +78,4 @@ https://ai.google.dev/gemini-api/docs/models
 structlog
 logguru
 logging   
+https://github.com/sunnysavita10/document_portal/blob/main/logger/custom_logger.py
