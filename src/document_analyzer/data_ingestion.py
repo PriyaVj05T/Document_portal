@@ -1,5 +1,5 @@
 import os
-import fitz
+import fitz        #rapper on top of pymupdf loader
 import uuid
 from datetime import datetime
 from logger.custom_logger import CustomLogger
