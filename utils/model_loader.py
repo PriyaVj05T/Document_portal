@@ -9,7 +9,7 @@ from langchain_groq import ChatGroq
 #from langchain_openai import ChatOpenAI
 from logger.custom_logger import CustomLogger
 from exception.custom_exception import DocumentPortalException
-log = CustomLogger().get_logger(__name__) #similar __file__
+log = CustomLogger().get_logger(__name__)
 
 class ModelLoader:
     
@@ -59,7 +59,7 @@ class ModelLoader:
 
         log.info("Loading LLM...")
         
-        provider_key = os.getenv("LLM_PROVIDER", "google")  # Default was groq previously
+        provider_key = os.getenv("LLM_PROVIDER", "groq")  # Default groq
         if provider_key not in llm_block:
             log.error("LLM provider not found in config", provider_key=provider_key)
             raise ValueError(f"Provider '{provider_key}' not found in config")
@@ -83,7 +83,7 @@ class ModelLoader:
         elif provider == "groq":
             llm=ChatGroq(
                 model=model_name,
-                api_key=self.api_keys["GROQ_API_KEY"],
+                api_key=self.api_keys["GROQ_API_KEY"], #type: ignore
                 temperature=temperature,
             )
             return llm
