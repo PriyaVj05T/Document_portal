@@ -10,6 +10,6 @@ pypdf
 structlog
 pymupdf
 pandas
-
+streamlit
 
 -e .
