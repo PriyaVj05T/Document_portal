@@ -11,5 +11,6 @@ structlog
 pymupdf
 pandas
 streamlit
+docx2txt
 
 -e .
