@@ -144,7 +144,11 @@ async def chat_query(
 
 # ---------- Helpers ----------
 class FastAPIFileAdapter:
-    """Adapt FastAPI UploadFile -> .name + .getbuffer() API"""
+    """
+    Adapt FastAPI UploadFile -> .name + .getbuffer() API
+    This is a workaround to use UploadFile in DocHandler methods that expect a file-like object.
+     
+    """
     def __init__(self, uf: UploadFile):
         self._uf = uf
         self.name = uf.filename
@@ -153,6 +157,10 @@ class FastAPIFileAdapter:
         return self._uf.file.read()
 
 def _read_pdf_via_handler(handler: DocHandler, path: str) -> str:
+    """
+    Read PDF using the handler's method, either read_pdf or read_.
+    Raises RuntimeError if neither method is available.
+    """
     if hasattr(handler, "read_pdf"):
         return handler.read_pdf(path)  # type: ignore
     if hasattr(handler, "read_"):
