@@ -9,3 +9,6 @@ logs/
 *.pyc
 test.py
 logger/
+data/
+*.log
+.data
