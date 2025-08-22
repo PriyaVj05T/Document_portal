@@ -11,4 +11,4 @@ test.py
 logger/
 data/
 *.log
-.data
+data/*
