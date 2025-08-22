@@ -1,6 +1,7 @@
 env
 .env
 .portalenv
+data/
 document_portal.egg-info
 portalenv
 venv/
@@ -9,6 +10,5 @@ logs/
 *.pyc
 test.py
 logger/
-data/
+**/data/
 *.log
-data/*
