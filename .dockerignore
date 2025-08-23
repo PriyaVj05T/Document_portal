@@ -11,3 +11,6 @@ venv/
 logs/
 .vscode/
 .github/
+data/
+portalenv/
+faiss_index/
