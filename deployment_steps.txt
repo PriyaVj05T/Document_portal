@@ -1,9 +1,7 @@
 Steps for running the App over the ECS:
 
 
-1. pull my latest entire code
-1.1 you will updated githubaction/workflow folder
-1.2 you will get updated utils/model_loader.py
+1.githubaction
 2. AWS Account
 3. AWS IAM User
 3.1 fetch the credential from the IAM USER: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
