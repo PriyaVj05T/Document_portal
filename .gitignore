@@ -13,3 +13,5 @@ logger/
 data/
 *.log
 
+* .pdf
+/archive/
