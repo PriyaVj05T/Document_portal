@@ -1,4 +1,3 @@
-#print("script started")
 import os
 from typing import List, Optional, Any, Dict
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
@@ -159,4 +158,3 @@ async def chat_query(
 # command for executing the fast api
 # uvicorn api.main:app --port 8080 --reload    
 #uvicorn api.main:app --host 0.0.0.0 --port 8080 --reload
-#print("script ended")
