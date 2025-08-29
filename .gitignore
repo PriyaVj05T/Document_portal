@@ -9,7 +9,7 @@ __pycache__/
 logs/
 *.pyc
 test.py
-logger/
+
 data/
 *.log
 
