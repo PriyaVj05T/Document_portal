@@ -184,7 +184,7 @@ Resources:
     Type: AWS::ECS::Service
     DependsOn: AttachGateway
     Properties:
-      ServiceName: document-portal-service
+      ServiceName: documentportaltd-service
       Cluster: !Ref ECSCluster
       LaunchType: FARGATE
       DesiredCount: 1
