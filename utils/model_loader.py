@@ -14,17 +14,17 @@ class ApiKeyManager:
 
     def __init__(self):
         self.api_keys = {}
-        raw = os.getenv("API_KEYS") #API_KEYS
+        raw = os.getenv("apikey") #API_KEYS
 
         if raw:
             try:
                 parsed = json.loads(raw)
                 if not isinstance(parsed, dict):
-                    raise ValueError("API_KEYS is not a valid JSON object")
+                    raise ValueError("apikey is not a valid JSON object")
                 self.api_keys = parsed
-                log.info("Loaded API_KEYS from ECS secret")
+                log.info("Loaded apikey from ECS secret")
             except Exception as e:
-                log.warning("Failed to parse API_KEYS as JSON", error=str(e))
+                log.warning("Failed to parse apikey as JSON", error=str(e))
 
         # Fallback to individual env vars
         for key in self.REQUIRED_KEYS:
